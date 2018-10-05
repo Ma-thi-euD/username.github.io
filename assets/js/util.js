@@ -4,6 +4,12 @@
    * Generate an indented list of links from a nav. Meant for use with panel().
    * @return {jQuery} jQuery object.
    */
+   // function myFunction() {
+   //     document.getElementById("frm1").submit();
+   // }
+
+
+
   $.fn.navList = function() {
 
     var $this = $(this);
@@ -430,88 +436,93 @@
 
       });
 
+
+
     // Events.
-    $this
-      .on('submit', function() {
-
-        $this.find('input[type=text],input[type=password],textarea')
-          .each(function(event) {
-
-            var i = $(this);
-
-            if (i.attr('name').match(/-polyfill-field$/))
-              i.attr('name', '');
-
-            if (i.val() == i.attr('placeholder')) {
-
-              i.removeClass('polyfill-placeholder');
-              i.val('');
-
-            }
-
-          });
-
-      })
-      .on('reset', function(event) {
-
-        event.preventDefault();
-
-        $this.find('select')
-          .val($('option:first').val());
-
-        $this.find('input,textarea')
-          .each(function() {
-
-            var i = $(this),
-              x;
-
-            i.removeClass('polyfill-placeholder');
-
-            switch (this.type) {
-
-              case 'submit':
-              case 'reset':
-                break;
-
-              case 'password':
-                i.val(i.attr('defaultValue'));
-
-                x = i.parent().find('input[name=' + i.attr('name') + '-polyfill-field]');
-
-                if (i.val() == '') {
-                  i.hide();
-                  x.show();
-                } else {
-                  i.show();
-                  x.hide();
-                }
-
-                break;
-
-              case 'checkbox':
-              case 'radio':
-                i.attr('checked', i.attr('defaultValue'));
-                break;
-
-              case 'text':
-              case 'textarea':
-                i.val(i.attr('defaultValue'));
-
-                if (i.val() == '') {
-                  i.addClass('polyfill-placeholder');
-                  i.val(i.attr('placeholder'));
-                }
-
-                break;
-
-              default:
-                i.val(i.attr('defaultValue'));
-                break;
-
-            }
-          });
-
-      });
+    // $this
+    //   .on('submit', function(event) {
+    //
+    //     console.log('fdewfewgf');
+    //     console.log($(this));
+    //     $this.find('input[type=text],input[type=password],textarea')
+    //       .each(function(event) {
+    //
+    //         var i = $(this);
+    //         console.log(i);
+    //
+    //         if (i.attr('name').match(/-polyfill-field$/))
+    //           i.attr('name', '');
+    //
+    //         if (i.val() == i.attr('placeholder')) {
+    //
+    //           i.removeClass('polyfill-placeholder');
+    //           i.val('');
+    //
+    //         }
+    //
+    //       });
+    //
+    //   })
+    //   .on('reset', function(event) {
+    //
+    //     event.preventDefault();
+    //
+    //     $this.find('select')
+    //       .val($('option:first').val());
+    //
+    //     $this.find('input,textarea')
+    //       .each(function() {
+    //
+    //         var i = $(this),
+    //           x;
+    //
+    //         i.removeClass('polyfill-placeholder');
+    //
+    //         switch (this.type) {
+    //
+    //           case 'submit':
+    //           case 'reset':
+    //             break;
+    //
+    //           case 'password':
+    //             i.val(i.attr('defaultValue'));
+    //
+    //             x = i.parent().find('input[name=' + i.attr('name') + '-polyfill-field]');
+    //
+    //             if (i.val() == '') {
+    //               i.hide();
+    //               x.show();
+    //             } else {
+    //               i.show();
+    //               x.hide();
+    //             }
+    //
+    //             break;
+    //
+    //           case 'checkbox':
+    //           case 'radio':
+    //             i.attr('checked', i.attr('defaultValue'));
+    //             break;
+    //
+    //           case 'text':
+    //           case 'textarea':
+    //             i.val(i.attr('defaultValue'));
+    //
+    //             if (i.val() == '') {
+    //               i.addClass('polyfill-placeholder');
+    //               i.val(i.attr('placeholder'));
+    //             }
+    //
+    //             break;
+    //
+    //           default:
+    //             i.val(i.attr('defaultValue'));
+    //             break;
+    //
+    //         }
+    //       });
+    //
+    //   });
 
     return $this;
 

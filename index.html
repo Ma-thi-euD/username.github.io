@@ -50,7 +50,7 @@
 			<!-- Contact -->
 			<article id="contact">
 				<h2 class="major">Contact</h2>
-				<form method="post" action="#">
+				<form method="post" action="#" name="contact">
 					<div class="fields">
 						<div class="field half">
 							<label for="name">Name</label>
@@ -66,8 +66,14 @@
 						</div>
 					</div>
 					<ul class="actions">
-						<li><input type="submit" value="Send Message" class="primary" /></li>
-						<li><input type="reset" value="Reset" /></li>
+						<li><input type="button" value="Send Message" class="primary" onClick="myFunction()"/></li>
+						<li><input type="button" value="Reset" onClick="this.form.reset()"/></li>
+						<script type="text/avascript">
+							function myFunction() {
+								var email = document.getElementById("email");
+								console.log(email)
+							}
+						</script>
 					</ul>
 				</form>
 			</article>
