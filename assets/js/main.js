@@ -296,7 +296,7 @@
 						.appendTo($this)
 						.on('click', function() {
 							if($this[0].id == 'contact') {
-								document.getElementById('contact').reset();
+								document.getElementById('contactForm').reset();
 							};
 							location.hash = '';
 						});
