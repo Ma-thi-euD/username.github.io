@@ -295,6 +295,9 @@
 					$('<div class="close">Close</div>')
 						.appendTo($this)
 						.on('click', function() {
+							if($this[0].id == 'contact') {
+								document.getElementById('contact').reset();
+							};
 							location.hash = '';
 						});
 
