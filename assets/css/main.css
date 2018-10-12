@@ -1259,6 +1259,28 @@ button {
   line-height: 5.5rem;
   border: solid 1px #ffffff;
   border-radius: 100%;
+  text-align: center;
+}
+
+#intro .logo {
+  width: 10rem;
+  height: 10rem;
+  line-height: 5.5rem;
+  border: solid 1px #ffffff;
+  border-radius: 100%;
+  margin: 0 auto;
+}
+
+#intro .avatar {
+  border-radius: 50%;
+  background-image: url("../../images/avatar.png");
+  width: 225px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #header .logo .icon:before {
