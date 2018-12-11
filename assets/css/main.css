@@ -179,6 +179,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   text-decoration: none;
 }
 
+h3.major{
+  border-bottom: solid 1px #ffffff;
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  width: -ms-max-content;
+  width: max-content;
+  padding-bottom: 0.5rem;
+  margin: 0 0 2rem 0;
+}
+
 h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
   border-bottom: solid 1px #ffffff;
   width: -moz-max-content;
@@ -1274,7 +1284,7 @@ button {
 #intro .avatar {
   border-radius: 50%;
   background-image: url("../../images/avatar.png");
-  width: 225px;
+  width: 300px;
   height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
